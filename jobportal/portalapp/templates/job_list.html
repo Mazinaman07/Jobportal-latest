@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/69aa724653.js" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(https://th.bing.com/th/id/OIP.GbMboU-krQvdIrfKgWpzXgHaFj?w=256&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7);
+        }
+
+        .container{
+            border: 1px solid black;
+        }
+
+        .body{
+            /* background-color: lightgray; */
+            width: 70vh;
+            height: 60vh;
+            text-align: center;
+            border: 2px solid black;
+
+        }
+
+        .center {
+            text-align: center;
+            
+        }
+        input[type="submit"]:hover {
+        background-color:black;
+        color: aliceblue;
+        }
+       
+        
+    </style>
+
+</head>
+<body>
+
+        {% for i,j,k,l,m,n,o in jobs %}
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.lv-r6UUaMfz9Q6zgSYDDjQHaKg?w=126&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> <b>{{k}}</b> in <b>{{i}}</b></h5>
+              <p class="card-text">Urgent Openings for <b>{{k}}</b>
+                Behavior of work <b>{{l}} and <b>{{n}}</b></b></p>
+                <a href="/jobdetails/{{o}}/{{user}}" class="btn btn-secondary">View More</a>
+            </div>
+          </div>
+
+          {% endfor %}
+    
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/69aa724653.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container{
+            border: 1px solid black;
+        }
+
+        .body{
+            background-color: lightgray;
+            width: 70vh;
+            height: 60vh;
+            text-align: center;
+            border: 2px solid black;
+
+        }
+
+        .center {
+            text-align: center;
+            
+        }
+        input[type="submit"]:hover {
+        background-color:black;
+        color: aliceblue;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %} <br><br>
+
+    <div class="body">
+        <h2>Applicant Registration Form</h2><br><br>
+
+        <!-- <form action="" method="POST" enctype="multipart/form-data"  > -->
+
+            <!-- {% csrf_token %} -->
+
+        <label for=""></label>
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" name="email"  placeholder="Email" style="width: 40vh;">  <br><br>
+
+        <label for="" ></label>
+        <i class="fa-solid fa-envelope"></i>
+        <input type="number" name="number" placeholder="Mobile Number" style="width: 40vh;">    <br><br>
+
+        <label for=""></label>
+        <i class="fa-solid fa-envelope"></i>
+        <input type="date" name="date" placeholder="dd-mm-yyyy" style="width: 40vh;">  <br><br>
+
+        <label for=""></label>
+        <i class="fa-solid fa-envelope"></i>
+        <input type="education" name="education" placeholder="Highest education qualification" style="width: 40vh;"> <br><br>
+
+        <label for=""> </label>
+        <i class="fa-solid fa-lock-open"></i>
+        <input type="password" placeholder="*******" style="width: 40vh;"> <br><br>
+
+        <label for=""></label>
+        <i class="fa-solid fa-lock-open"></i>
+        <input type="password" placeholder="Re-type password" style="width: 40vh;">  <br><br>
+
+        <div class="center">
+            <input type="submit" value="Register">
+        </div><br>
+
+        <!-- <a href="{% url 'signin' %}">Back to Sign In</a> -->
+
+    </form>
+    </div>
+
+
+
+    <!-- <div class="body">
+
+    <h2>Applicant Registration Form</h2>
+
+    <div class="container"></div>
+
+    <form action="" method="POST" enctype="multipart/form-data"  >
+
+        {% csrf_token %}
+
+        <div class="card">
+      
+            
+        {% load widget_tweaks %}
+
+            {% render_field form.username placeholder="username" class+="usm" %} <br><br>
+            {% render_field form.email placeholder="Email" class+="eml" %} <br><br>
+            {% render_field form.mobile placeholder="Mobile Number" class+="mob" %} <br><br>
+            {% render_field form.dob placeholder="dd-mm-yyyy" class+="dob" %} <br><br>
+            {% render_field form.education placeholder="Highest education qualification" class+="edq" %} <br><br>
+            {% render_field form.password1 placeholder="*****" class+="psd1" %} <br><br>
+            {% render_field form.password2 placeholder="RE-type Password" class+="psds2" %} <br><br>
+
+            <input type="button" value="register"  style="height: 40px;background-origin: padding-box;border-radius: 5px;font-weight: bolder;">
+
+        </div>
+    </div> -->
+    
+</div>
+    
+</body>
+</html>

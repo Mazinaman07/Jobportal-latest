@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    {% load static %}
+<body>
+    
+    <form method="post" action="/updateitem/{{itm.id}}" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        <table>
+
+            <tr><td>               
+                NAME
+                <br><input name="name" value="{{itm.name}}" type="text">
+            </td></tr>
+            <br><br>
+
+
+            <tr><td>
+                Username
+                <br><input name="unm" value="{{ itm.username }}" type="text">
+            </td></tr>           
+            <br><br>
+
+
+            <tr><td>
+                Email
+                <br><input name="email" value="{{itm.email}}" type="email">
+            </td></tr> 
+            <br><br>
+
+
+            <tr><td>
+                DOB
+                <br><input name="dob" value="{{itm.dob}}" type="date">
+            </td></tr>
+            <br><br>
+
+            <tr><td>
+                MOB
+                <br><input name="mobile" value="{{itm.mob}}" type="text">
+            </td></tr>
+            <br><br>
+
+            <tr><td>
+                qualification
+                <br><input name="qn" value="{{itm.qn}}" type="text">
+            </td></tr>
+            <br><br>
+
+
+            <button type="submit">UPDATE</button> <br><br>
+
+
+        </table>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dream Job</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+
+
+ 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            
+        }
+
+        .search-bar {
+            flex-grow: 0.15; 
+            margin: 0 20px;
+            position: relative;
+            top: 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin-right: 120px;
+            background-color: #ddd; 
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            color: black;
+        }
+
+          body {
+            text-align: center;
+            padding: 30px;
+            /* background-size: cover; */
+            background-image: url(https://th.bing.com/th/id/R.abbcd3836cbed36357140b5dbea936e1?rik=Oj84mMXS55nEBQ&riu=http%3a%2f%2fwww.pptback.com%2fuploads%2fsoft-blue-textures-backgrounds-powerpoint.jpg&ehk=TtXY2pJ%2fJJwvK%2fET6bZ4NFtQMJNmxRTZmOF%2fXgm6uq0%3d&risl=&pid=ImgRaw&r=0)
+          }
+        .hello {
+            float: left;
+            list-style: none;
+            font-size: 40px;
+            top: px;  
+            position: relative;         
+        }
+        .detail{
+            padding:7vh;
+            /* width: 60vh; */
+            /* height: 100vh; */
+            /* background-color: whitesmoke; */
+            float: left;
+            position: relative;
+            top: 200px;
+            /* background-image: url((https://www.bing.com/th?id=OIP.HeY3qkdAmZKtiBfzqWIghgHaEK&w=184&h=104&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2); */
+                   
+        }
+  
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="" alt="">
+        <div class="search-bar">
+            <input type="text" placeholder="Search your dream job with us ">
+        </div>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+       
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Log-in
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/regis/">company</a></li>
+              <li><a class="dropdown-item" href="/login/" >job seeker</a></li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+
+    </nav>
+
+            <div>
+                <p>Username: {{ username }}</p>
+                <p>Email: {{ email }}</p>
+            </div>    
+        <ul>
+            <li class="hello"><b>JobsGuru</b></li>
+        </ul>
+
+
+    <div class="detail" >
+        <img src="https://th.bing.com/th/id/OIP.zUAg0htn2hWj7EzQFatjnQHaHa?w=198&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+        <h4>Post Your Jobs</h4>
+        <p>Add your vaccancies here</p>
+        <a class="btn btn-primary" href="/postjob/{{id}}" role="button">Openings</a>
+    </div>
+
+    <div class="detail" >
+      <img src="https://th.bing.com/th/id/OIP.FsCAPT5yAH7eqcADUWjxjQHaHa?w=187&h=188&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+        <h4>Registered companies</h4>
+        <p>List of companies that join hand with us</p>
+        <a href="/cdis" class="btn btn-secondary">View List</a>
+
+
+    <div class="detail">
+      <img src="https://th.bing.com/th/id/OIP.HPs1EEGaRoH3ZTWUaE2iwQHaHa?w=188&h=188&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+        <h4>Applicant Profile</h4>
+        <p>See those who are interested tro join you</p>
+<a href="/applicant/{{id}}" class="btn btn-secondary">View</a>
+
+</form>
+</body>
+
+</html> 
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table align ="left">
+            <tr>
+                <th>JOB DETAILS :</th>
+            </tr>
+          <tr>
+            <th>Company Name </th>
+            <td><input name="cname" type="text" value="{{a}}" readonly></td>
+          </tr>
+          <tr>
+            <th>Designation </th>
+            <td><input name="jtitle" type="text" value="{{b}}" readonly></td>
+          </tr>
+          <tr>
+              <th>APPLICANT DETAILS :</th>
+          </tr>
+          <tr>
+            <th>Name </th>
+            <td><input name="name" type="text" value="{{c}}" readonly></td>
+          </tr>
+            <tr>
+            <th>Email </th>
+            <td><input name="email" type="email" value="{{d}}" readonly></td>
+          </tr>
+          <tr>
+            <th>Qualification </th>
+            <td><input name="quali" type="text" required></td>
+          </tr>
+            <tr>
+            <th>Phone No</th>
+            <td><input name="phone" type="number" required></td>
+          </tr>
+          <tr>
+            <th>Experience </th>
+            <td><select name="uexp" class="form-select" aria-label="Default select example">
+                    <option selected>Select your years of experience</option>
+                    <option value="0-1">0 - 1</option>
+                    <option value="1-2">1 - 2</option>
+                    <option value="2-3">2 - 3</option>
+                    <option value="3-4">3 - 4</option>
+                    <option value="4-5">4 - 5</option>
+                    <option value="5-6">5 - 6</option>
+                    <option value="6-7">6 - 7</option>
+                    <option value="7-8">7 - 8</option>
+            </select></td>
+          </tr>
+          <tr>
+            <th>Upload your Resume </th>
+            <td><input name="resume" type="file" required></td>
+          </tr>
+            <tr>
+                 <td><input id="smt" type="submit" class="btn btn-secondary" value="Submit"></td>
+            </tr>
+        </table>
+  
+</form>
+  
+  
+</body>
+</html>

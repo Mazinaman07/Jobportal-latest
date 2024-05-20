@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            height: 100vh;
+            /* width: 100vw; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style> 
+</head>
+
+<body>
+
+    <form class=" login_form" method="post">
+        {% csrf_token %}
+        {% if messages %}
+        {% for message in messages %}
+
+        <div class="alert alert-info">
+            {{message}}
+
+        </div>
+        <li>
+            {% if message.tags %}
+        <div class="{{message.tags}}"></div>
+
+        {% endif %} </li>
+        {%endfor %}
+        {% endif %}
+
+        
+        <input type="text" name="uname" placeholder="username"><br><br>
+        <input type="email" name="email" placeholder="email"><br><br>
+        <input type="password" name="password" placeholder="password"><br><br>
+
+        <button type="submit">REGISTER</button>
+
+        <p class="message">Already registered? <a href="#">Sign in</a> </p>
+
+    </div>
+
+    </form>
+
+</style>
+
+    
+</body>
+</html>

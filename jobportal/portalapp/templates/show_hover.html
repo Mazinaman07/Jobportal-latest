@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mt-3">
+            {% for i,j,k,l,m,n,o in applicants %}
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+                    <div class="card d-flex position-relative flex-column">
+                        <div class='imgContainer'>
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/009/361/502/small/3d-profile-realistic-icon-design-illustrations-3d-render-design-concept-vector.jpg"><br>
+                            <label>{{j}}</label><br>
+                            <a href="{% static o %}" download >Resume</a>
+                        </div>
+                        <div class="content">
+                             <table>
+                                 <tr>
+                                     <th>Name</th>
+                                     <td>{{j}}</td>
+                                 </tr>
+                                 <tr>
+                                     <th>Post Applied</th>
+                                     <td>{{i}}</td>
+                                 </tr>
+                                 <tr>
+                                     <th>Email</th>
+                                     <td>{{k}}</td>
+                                 </tr>
+                                 <tr>
+                                     <th>Qualification</th>
+                                     <td>{{l}}</td>
+                                 </tr>
+                                 <tr>
+                                    <th>Phone</th>
+                                    <td>{{m}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Experience</th>
+                                    <td>{{n}} ys</td>
+                                </tr>
+                            </table>
+                       </div>
+                   </div>
+   
+               </div>
+           </div>
+           {% endfor %}
+    </div>
+   </div>
+
+    
+</body>
+</html>
